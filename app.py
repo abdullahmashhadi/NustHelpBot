@@ -7,10 +7,11 @@ import logging
 load_dotenv()
 
 app = Flask(__name__)
-
+ug_id=os.getenv("UG_SRC_ID")
+pg_id=os.getenv("PG_SRC_ID")
 PDF_SOURCE_IDS = {
- 'ug': 'src_9CCHuPpGqgOcoaWU0THDd', 
- 'pg': 'src_BqAfbEP2euvCgzAn4DxJo'
+ 'ug': ug_id,
+ 'pg': pg_id
 }
 
 def chat_with_pdf(source_id, user_message):
