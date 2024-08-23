@@ -39,7 +39,7 @@ async function sendQuery() {
   }
 
   const responseDiv = document.getElementById("response");
-  responseDiv.innerHTML = "Loading...";
+  responseDiv.innerHTML = `<img src="./static/loading.gif" alt="Loading..." />`;
 
   try {
     const response = await fetch("/chat", {
